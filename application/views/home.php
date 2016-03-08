@@ -90,11 +90,25 @@
 <header>
 	<div class="container">
 		<div class="intro-text">
-			<div class="intro-lead-in"><?php echo $t['header-ola']; ?></div>
-			<div class="intro-heading"><?php echo $t['header-bem-vindo']; ?></div>
+			<div class="intro-lead-in" style="font-size:22px;"><?php echo $t['header-ola']; ?></div>
+			<div class="intro-heading"  style="font-size:42px;"><?php echo $t['header-bem-vindo']; ?></div>
 			<a href="#sobreoartista" class="page-scroll btn btn-xl"><?php echo $t['menu-sobre-o-artista']; ?></a>
+			<div>
+			<br>
+			<ul class="list-inline social-buttons">
+				<li>
+					<a href="https://www.instagram.com/notasvisuais/" target="_blank"><i class="fa fa-instagram"></i></a>
+				</li>
+				<li><a href="https://www.facebook.com/susanocorreia" target="_blank"><i class="fa fa-facebook"></i></a>
+				<li><a href="https://www.youtube.com/user/scsuca" target="_blank"><i class="fa fa-youtube"></i></a>
+				<li><a href="https://twitter.com/scsuca" target="_blank"><i class="fa fa-twitter"></i></a>
+				</li>
+			</ul>
 		</div>
+		</div>
+		
 	</div>
+	
 </header>
 
 <!-- Sobre o Artista Section -->
@@ -472,10 +486,12 @@
 			<div class="col-md-4">
 				<ul class="list-inline social-buttons">
 					<li>
-						<a href="https://www.instagram.com/notasvisuais/" target="_blank"><i class="fa fa-instagram"></i></a>
-					</li>
-					<li><a href="https://www.facebook.com/susanocorreia" target="_blank"><i class="fa fa-facebook"></i></a>
-					</li>
+				<a href="https://www.instagram.com/notasvisuais/" target="_blank"><i class="fa fa-instagram"></i></a>
+			</li>
+			<li><a href="https://www.facebook.com/susanocorreia" target="_blank"><i class="fa fa-facebook"></i></a>
+			<li><a href="https://www.youtube.com/user/scsuca" target="_blank"><i class="fa fa-youtube"></i></a>
+			<li><a href="https://twitter.com/scsuca" target="_blank"><i class="fa fa-twitter"></i></a>
+			</li>
 
 				</ul>
 			</div>
@@ -864,6 +880,8 @@
 
 <script>
 	$(document).ready(function() {
+		$('header').height($(window).height());
+
 		$(window).scroll(function(){
 			if(190 < $(window).scrollTop()) {
 				if($('#img-ass').height() == 100) {
@@ -878,6 +896,10 @@
 					});
 				}
 			}
+		});
+
+		$(window).resize(function() {
+			$('header').height($(window).height());
 		});
 
 	});
