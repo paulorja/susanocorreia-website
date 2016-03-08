@@ -101,7 +101,7 @@
 				</li>
 				<li><a href="https://www.facebook.com/susanocorreia" target="_blank"><i class="fa fa-facebook"></i></a>
 				<li><a href="https://www.youtube.com/user/scsuca" target="_blank"><i class="fa fa-youtube"></i></a>
-				<li><a href="https://twitter.com/scsuca" target="_blank"><i class="fa fa-twitter"></i></a>
+				<li><a href="https://twitter.com/susanocorreia" target="_blank"><i class="fa fa-twitter"></i></a>
 				</li>
 			</ul>
 		</div>
@@ -490,7 +490,7 @@
 			</li>
 			<li><a href="https://www.facebook.com/susanocorreia" target="_blank"><i class="fa fa-facebook"></i></a>
 			<li><a href="https://www.youtube.com/user/scsuca" target="_blank"><i class="fa fa-youtube"></i></a>
-			<li><a href="https://twitter.com/scsuca" target="_blank"><i class="fa fa-twitter"></i></a>
+			<li><a href="https://twitter.com/susanocorreia" target="_blank"><i class="fa fa-twitter"></i></a>
 			</li>
 
 				</ul>
