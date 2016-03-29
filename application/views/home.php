@@ -86,30 +86,47 @@
 	<!-- /.container-fluid -->
 </nav>
 
+<div style="width:100%; height: 100%; background-color:green; position: absolute; top:0px; background: black;">
+
+</div>
+
+<div style="width:100%; height: 100%; background-image: url(assets/img/header/0.jpg); background-position: center center;
+	background-size: auto 100%; position: absolute; top:0px;" id="h0">
+
+</div>
+<div style="width:100%; height: 100%; background-image: url(assets/img/header/1.jpg); background-position: center center;
+	background-size: auto 100%; position: absolute; top:0px; display:none;" id="h1">
+
+</div>
+<div style="width:100%; height: 100%; background-image: url(assets/img/header/2.jpg); background-position: center center;
+	background-size: auto 100%; position: absolute; top:0px; display:none;" id="h2">
+
+</div>
+
+<div style="width:100%; height: 100%; background-image: url(assets/img/header/3.jpg); background-position: center center;
+	background-size: auto 100%; position: absolute; top:0px; display:none;" id="h3">
+
+</div>
+
 <!-- Header -->
 <header>
-	<div class="container">
-		<div class="intro-text">
-			<div class="intro-lead-in" style="font-size:22px;"><?php echo $t['header-ola']; ?></div>
-			<div class="intro-heading"  style="font-size:42px;"><?php echo $t['header-bem-vindo']; ?></div>
-			<a href="#sobreoartista" class="page-scroll btn btn-xl"><?php echo $t['menu-sobre-o-artista']; ?></a>
-			<div>
-			<br>
-			<ul class="list-inline social-buttons">
-				<li>
-					<a href="https://www.instagram.com/notasvisuais/" target="_blank"><i class="fa fa-instagram"></i></a>
-				</li>
-				<li><a href="https://www.facebook.com/susanocorreia" target="_blank"><i class="fa fa-facebook"></i></a>
-				<li><a href="https://www.youtube.com/user/scsuca" target="_blank"><i class="fa fa-youtube"></i></a>
-				<li><a href="https://twitter.com/susanocorreia" target="_blank"><i class="fa fa-twitter"></i></a>
-				</li>
-			</ul>
-		</div>
-		</div>
-		
+	<div class="intro-text">
+		<div class="intro-lead-in" style="font-size:22px;"><?php echo $t['header-ola']; ?></div>
+		<div class="intro-heading"  style="font-size:42px;"><?php echo $t['header-bem-vindo']; ?></div>
+		<div>
+		<br>
+		<ul class="list-inline social-buttons">
+			<li>
+				<a href="https://www.instagram.com/notasvisuais/" target="_blank"><i class="fa fa-instagram"></i></a>
+			</li>
+			<li><a href="https://www.facebook.com/susanocorreia" target="_blank"><i class="fa fa-facebook"></i></a>
+			<li><a href="https://www.youtube.com/user/scsuca" target="_blank"><i class="fa fa-youtube"></i></a>
+			<li><a href="https://twitter.com/susanocorreia" target="_blank"><i class="fa fa-twitter"></i></a>
+			</li>
+		</ul>
 	</div>
-	
 </header>
+
 
 <!-- Sobre o Artista Section -->
 <section id="sobreoartista">
@@ -123,16 +140,14 @@
 			<img src="<?php echo base_url('assets/img/foto-autor.jpg'); ?>" width="200px" align="center" alt="">
 		</div>
 		<div class="row text-center">
-			<div class="col-lg-12">
+			<div class="col-lg-12" style="text-align: justify">
 				<p class="text-muted"><?php echo $t['descricao-susano']; ?></p>
 			</div>
 		</div>
 		<div class="row" style="text-align: center; margin:15px 0px 25px 0px">
 			<img src="<?php echo base_url('assets/img/mosaico.jpg'); ?>" style="max-width: 100%" align="center" alt="">
 		</div>
-		<div class="text-center">
-			<a href="#galeria" class="page-scroll btn btn-xl"><?php echo $t['menu-galeria']; ?></a>
-		</div>
+
 	</div>
 </section>
 
@@ -879,11 +894,43 @@
 <script src="<?php echo base_url('assets/js/agency.js'); ?>"></script>
 
 <script>
-	$(document).ready(function() {
-		$('header').height($(window).height());
+	var loop = 0;
+	var speed = 2500;
 
-		$(window).scroll(function(){
-			if(190 < $(window).scrollTop()) {
+	setInterval(function() {
+
+
+		switch(loop) {
+			case 0:
+				$('#h3').fadeOut(speed);
+				$('#h0').fadeIn(speed);
+				break;
+			case 1:
+				$('#h0').fadeOut(speed);
+				$('#h1').fadeIn(speed);
+				break;
+			case 2:
+				$('#h1').fadeOut(speed);
+				$('#h2').fadeIn(speed);
+				break;
+			case 3:
+				$('#h2').fadeOut(speed);
+				$('#h3').fadeIn(speed);
+				break;
+
+		}
+
+		loop++;
+		if (loop == 4) {
+			loop = 0;
+		}
+	}, 5000);
+
+
+	function arrumar_assinatura() {
+
+		if(window.innerWidth > 1050) {
+			if(35 < $(window).scrollTop()) {
 				if($('#img-ass').height() == 100) {
 					$("#img-ass").animate({
 						height: "34px"
@@ -896,13 +943,41 @@
 					});
 				}
 			}
+		} else {
+			if($('#img-ass').height() == 100) {
+				$("#img-ass").animate({
+					height: "34px"
+				});
+			}
+		}
+
+	}
+
+	$(document).ready(function() {
+
+
+		$('header').height($(window).height());
+
+		arrumar_assinatura();
+
+		$(window).scroll(function() {
+			arrumar_assinatura();
 		});
+
 
 		$(window).resize(function() {
 			$('header').height($(window).height());
 		});
 
 	});
+
+
+	window.setInterval(function(){
+		arrumar_assinatura();
+
+
+	}, 1000);
+
 </script>
 
 </body>

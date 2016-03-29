@@ -28,7 +28,7 @@ class Site extends CI_Controller {
 
 	private function pt_tags() {
 		return array(
-			'menu-sobre-o-artista' => 'SOBRE O ARTISTA',
+			'menu-sobre-o-artista' => 'SOBRE',
 			'menu-galeria' => 'GALERIA',
 			'menu-exposicoes' => 'EXPOSIÇÕES',
 			'menu-blog' => 'BLOG',
@@ -36,7 +36,7 @@ class Site extends CI_Controller {
 			'menu-contato' => 'CONTATO',
 			'header-ola' => 'Olá',
 			'header-bem-vindo' => 'BEM VINDO',
-			'descricao-susano' => 'Susano Correia (Florianópolis, 17 de janeiro de 1989) é artista visual, desenvolve principalmente as técnicas do desenho e da pintura. Formou-se em Artes Visuais na Universidade do Estado de Santa Catarina (UDESC). Atualmente vem desenvolvendo uma série de trabalhos que intitula de Embruxados. Nesta série o artista discute diversas questões contemporâneas do cotidiano ligadas ao ‘embruxamento’, refletindo principalmente sobre assuntos de ordem psicológica. A palavra embruxado não está ligada a questões religiosas, e sim a um modo de ser e estar no mundo.',
+			'descricao-susano' => 'Olá, me chamo Susano Correia. Nasci em Florianópolis e sou artista visual formado em Artes Visuais pela UDESC. Trabalho principalmente com desenho e pintura, mas de vez em quando gosto de experimentar outras técnicas. Me interesso especialmente pelas pessoas e a condição humana. Penso que a minha pesquisa em arte é um processo contínuo que abrange toda minha vida, transformo em trabalhos artísticos minhas experiências e meus estudos. Para acompanhar meu trabalho você pode me seguir nas redes sociais e no meu blog. Nas redes posto os trabalhos que venho desenvolvendo na medida em que eles são criados, e no blog tenho escrito um pouco sobre minhas ideias e meu processo criativo. Acredito que a interação com o público é muito importante tendo em vista que ele é parte fundamental da significação dos trabalhos. Sem público não há arte. Então vamos lá!',
 			'galeria-bottom' => 'Conheça o trabalho de Susano Correia',
 			'obra-cante-para-mim' => 'Cante Para Mim',
 			'obra-morte-embruxada' => 'Morte Embruxada',

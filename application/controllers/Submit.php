@@ -20,12 +20,12 @@ class Submit extends CI_Controller {
             $this->email->from('scsuca', 'Susanno Correia');
             $this->email->to('scsuca@gmail.com');
 
-            $this->email->subject('[4SO CONTATO SITE]'.$postData['nome']);
+            $this->email->subject('[SUSANO CORREIA CONTATO]'.$postData['nome']);
             $this->email->message(
-                "NOME".$postData['nome']."\n".
-                "EMAIL".$postData['email']."\n".
-                "TEKEFIBE".$postData['telefone']."\n".
-                $postData['msg']
+                "NOME: ".$postData['nome']."\n".
+                "EMAIL: ".$postData['email']."\n".
+                "TELEFONE: ".$postData['telefone']."\n".
+                "MENSAGEM: ".$postData['msg']
             );
 
             $this->email->smtp_port = '587';

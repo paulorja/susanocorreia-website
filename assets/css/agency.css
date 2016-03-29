@@ -201,19 +201,22 @@ h1,h2,h3,h4,h5,h6
 header
 {
 	background-attachment: scroll;
-	background-image: url(../img/header-bg.jpg);
+	/*background-image: url(../img/header-bg.jpg);*/
 	background-position: center center;
-	background-repeat: none;
 	background-size: auto 100%;
+	background: transparent;
 	color: #fff;
 	text-align: center;
 	position: relative;
+	min-height: 500px;
 }
 
 header .intro-text
 {
-	padding-bottom: 50px;
-	padding-top: 100px;
+	text-align: center;
+	position: absolute;
+	width: 100%;
+	bottom: 0px;
 }
 header .intro-text .intro-lead-in
 {
@@ -221,7 +224,6 @@ header .intro-text .intro-lead-in
 	font-size: 22px;
 	font-style: italic;
 	line-height: 22px;
-	margin-bottom: 25px;
 }
 header .intro-text .intro-heading
 {
@@ -229,15 +231,18 @@ header .intro-text .intro-heading
 	font-size: 50px;
 	font-weight: 700;
 	line-height: 50px;
-	margin-bottom: 25px;
 	text-transform: uppercase;
+}
+@media (min-width:168px) {
+	header .intro-text {
+		margin-bottom: 155px;
+	}
 }
 @media (min-width:768px)
 {
 	header .intro-text
 	{
-		padding-bottom: 200px;
-		padding-top: 240px;
+		margin-bottom: 65px;
 	}
 	header .intro-text .intro-lead-in
 	{
@@ -793,4 +798,8 @@ img::-moz-selection
 body
 {
 	webkit-tap-highlight-color: #333333;
+}
+
+.nav>li>a {
+    padding: 10px 10px !important;
 }
