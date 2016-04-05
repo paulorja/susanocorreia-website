@@ -108,6 +108,11 @@
 
 </div>
 
+<div style="width:100%; height: 100%; background-image: url(assets/img/header/4.jpg); background-position: center center;
+	background-size: auto 100%; position: absolute; top:0px; display:none;" id="h4">
+
+</div>
+
 <!-- Header -->
 <header>
 	<div class="intro-text">
@@ -895,14 +900,13 @@
 
 <script>
 	var loop = 0;
-	var speed = 2500;
+	var speed = 4000;
 
 	setInterval(function() {
 
-
 		switch(loop) {
 			case 0:
-				$('#h3').fadeOut(speed);
+				$('#h4').fadeOut(speed);
 				$('#h0').fadeIn(speed);
 				break;
 			case 1:
@@ -917,14 +921,17 @@
 				$('#h2').fadeOut(speed);
 				$('#h3').fadeIn(speed);
 				break;
-
+			case 4:
+				$('#h3').fadeOut(speed);
+				$('#h4').fadeIn(speed);
+				break;
 		}
 
 		loop++;
-		if (loop == 4) {
+		if (loop == 5) {
 			loop = 0;
 		}
-	}, 5000);
+	}, speed);
 
 
 	function arrumar_assinatura() {
