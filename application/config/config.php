@@ -24,7 +24,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |
 */
 //$config['base_url'] = 'http://www.4so.com.br/';
-$config['base_url'] = 'http://localhost/susanocorreia-site/';
+$config['base_url'] = 'http://localhost/susano-correia-site/';
 /*
 |--------------------------------------------------------------------------
 | Index File

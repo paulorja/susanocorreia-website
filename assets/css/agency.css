@@ -1,6 +1,11 @@
+
+.page-scroll:hover {
+	color: #ec951a;
+}
+
 body
 {
-	font-family: "Roboto Slab","Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-family: 'Roboto', sans-serif;
 	overflow-x: hidden;
 }
 .text-muted
@@ -34,7 +39,7 @@ a:hover,a:focus,a:active,a.active
 }
 h1,h2,h3,h4,h5,h6
 {
-	font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-family: 'Roboto', sans-serif;
 	font-weight: 700;
 	text-transform: uppercase;
 }
@@ -115,6 +120,7 @@ h1,h2,h3,h4,h5,h6
 {
 	background-color: #222;
 	border-color: transparent;
+	height: 40px;
 }
 .navbar-default .navbar-brand
 {
@@ -123,7 +129,7 @@ h1,h2,h3,h4,h5,h6
 }
 .navbar-default .navbar-brand:hover,.navbar-default .navbar-brand:focus,.navbar-default .navbar-brand:active,.navbar-default .navbar-brand.active
 {
-	color: #333333;
+	color: #ec951a;
 }
 .navbar-default .navbar-collapse
 {
@@ -142,17 +148,22 @@ h1,h2,h3,h4,h5,h6
 {
 	background-color: #333333;
 }
+
+#label-susano-correia {
+	font-family: "Courier New",Courier,"Lucida Sans Typewriter","Lucida Typewriter",monospace;
+	padding: 5px;
+}
 .navbar-default .nav li a
 {
 	color: #fff;
-	font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
-	font-weight: 400;
+	/*font-family: 'Roboto', sans-serif;*/
+	font-family: "Courier New",Courier,"Lucida Sans Typewriter","Lucida Typewriter",monospace;
 	letter-spacing: 1px;
-	text-transform: uppercase;
+	/*text-transform: uppercase;*/
 }
 .navbar-default .nav li a:hover,.navbar-default .nav li a:focus
 {
-	color: #333333;
+	color: #ec951a;
 	outline: 0;
 }
 .navbar-default .navbar-nav>.active>a
@@ -192,6 +203,7 @@ h1,h2,h3,h4,h5,h6
 	{
 		background-color: #222;
 		padding: 10px 0;
+		opacity: 0.75;
 	}
 	.navbar-default.navbar-shrink .navbar-brand
 	{
@@ -208,7 +220,7 @@ header
 	color: #fff;
 	text-align: center;
 	position: relative;
-	min-height: 500px;
+	min-height: 650px;
 }
 
 header .intro-text
@@ -237,9 +249,15 @@ header .intro-text .intro-heading
 	header .intro-text {
 		margin-bottom: 155px;
 	}
+	.navbar-brand {
+		font-size: 20px;
+	}
 }
 @media (min-width:768px)
 {
+	.navbar-brand {
+		font-size: 36px !important;
+	}
 	header .intro-text
 	{
 		margin-bottom: 65px;
@@ -257,6 +275,7 @@ header .intro-text .intro-heading
 		font-weight: 700;
 		text-transform: uppercase;
 	}
+
 }
 section
 {
@@ -517,6 +536,10 @@ section h3.section-subheading
 }
 @media (min-width:992px)
 {
+	.nav>li>a {
+	    padding: 0px 30px;
+	    font-weight: 100;
+	}
 	.timeline>li
 	{
 		min-height: 150px;
@@ -798,8 +821,4 @@ img::-moz-selection
 body
 {
 	webkit-tap-highlight-color: #333333;
-}
-
-.nav>li>a {
-    padding: 10px 10px !important;
 }

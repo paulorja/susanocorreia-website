@@ -28,14 +28,14 @@ class Site extends CI_Controller {
 
 	private function pt_tags() {
 		return array(
-			'menu-sobre-o-artista' => 'SOBRE',
-			'menu-galeria' => 'GALERIA',
-			'menu-exposicoes' => 'EXPOSIÇÕES',
-			'menu-blog' => 'BLOG',
-			'menu-loja' => 'LOJA',
-			'menu-contato' => 'CONTATO',
-			'header-ola' => 'Olá',
-			'header-bem-vindo' => 'BEM VINDO',
+			'menu-sobre-o-artista' => 'sobre',
+			'menu-galeria' => 'galeria',
+			'menu-exposicoes' => 'exposições',
+			'menu-blog' => 'blog',
+			'menu-loja' => 'loja',
+			'menu-contato' => 'contato',
+			'header-ola' => '',
+			'header-bem-vindo' => 'bem vindo',
 			'descricao-susano' => 'Olá, me chamo Susano Correia. Nasci em Florianópolis e sou artista visual formado em Artes Visuais pela UDESC. Trabalho principalmente com desenho e pintura, mas de vez em quando gosto de experimentar outras técnicas. Me interesso especialmente pelas pessoas e a condição humana. Penso que a minha pesquisa em arte é um processo contínuo que abrange toda minha vida, transformo em trabalhos artísticos minhas experiências e meus estudos. Para acompanhar meu trabalho você pode me seguir nas redes sociais e no meu blog. Nas redes posto os trabalhos que venho desenvolvendo na medida em que eles são criados, e no blog tenho escrito um pouco sobre minhas ideias e meu processo criativo. Acredito que a interação com o público é muito importante tendo em vista que ele é parte fundamental da significação dos trabalhos. Sem público não há arte. Então vamos lá!',
 			'galeria-bottom' => 'Conheça o trabalho de Susano Correia',
 			'obra-cante-para-mim' => 'Cante Para Mim',

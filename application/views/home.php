@@ -28,6 +28,7 @@
 	<link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
 
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 	<!--[if lt IE 9]>
@@ -40,7 +41,7 @@
 <body id="page-top" class="index">
 
 <!-- Navigation -->
-<nav class="navbar navbar-default navbar-fixed-top">
+<nav class="navbar navbar-default navbar-fixed-top navbar-shrink">
 	<div class="container">
 		<!-- Brand and toggle get grouped for better mobile display -->
 		<div class="navbar-header page-scroll">
@@ -50,12 +51,14 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</button>
-			<a class="navbar-brand page-scroll" href="#page-top"><img height="100px" id="img-ass" src="<?php echo base_url('assets/img/ass.png'); ?>" alt="Assinatura Susano Correia" /></a>
+			<a class="navbar-brand page-scroll" href="#page-top" id="label-susano-correia">
+				Susano Correia
+			</a>
 		</div>
 
 		<!-- Collect the nav links, forms, and other content for toggling -->
 		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-			<ul class="nav navbar-nav navbar-right">
+			<ul class="nav navbar-nav navbar-right" style="margin-top: 4px;">
 				<li class="hidden">
 					<a href="#page-top"></a>
 				</li>
@@ -91,33 +94,33 @@
 </div>
 
 <div style="width:100%; height: 100%; background-image: url(assets/img/header/0.jpg); background-position: center center;
-	background-size: auto 100%; position: absolute; top:0px;" id="h0">
+	background-size: auto auto; position: absolute; top:0px;" id="h0">
 
 </div>
 <div style="width:100%; height: 100%; background-image: url(assets/img/header/1.jpg); background-position: center center;
-	background-size: auto 100%; position: absolute; top:0px; display:none;" id="h1">
+	background-size: auto auto; position: absolute; top:0px; display:none;" id="h1">
 
 </div>
 <div style="width:100%; height: 100%; background-image: url(assets/img/header/2.jpg); background-position: center center;
-	background-size: auto 100%; position: absolute; top:0px; display:none;" id="h2">
+	background-size: auto auto; position: absolute; top:0px; display:none;" id="h2">
 
 </div>
 
 <div style="width:100%; height: 100%; background-image: url(assets/img/header/3.jpg); background-position: center center;
-	background-size: auto 100%; position: absolute; top:0px; display:none;" id="h3">
+	background-size: auto auto; position: absolute; top:0px; display:none;" id="h3">
 
 </div>
 
 <div style="width:100%; height: 100%; background-image: url(assets/img/header/4.jpg); background-position: center center;
-	background-size: auto 100%; position: absolute; top:0px; display:none;" id="h4">
+	background-size: auto auto; position: absolute; top:0px; display:none;" id="h4">
 
 </div>
 
 <!-- Header -->
 <header>
 	<div class="intro-text">
-		<div class="intro-lead-in" style="font-size:22px;"><?php echo $t['header-ola']; ?></div>
-		<div class="intro-heading"  style="font-size:42px;"><?php echo $t['header-bem-vindo']; ?></div>
+		<div style="font-size:22px;"><?php echo $t['header-ola']; ?></div>
+		<div style="font-size:42px;"><?php echo $t['header-bem-vindo']; ?></div>
 		<div>
 		<br>
 		<ul class="list-inline social-buttons">
@@ -933,57 +936,6 @@
 		}
 	}, speed);
 
-
-	function arrumar_assinatura() {
-
-		if(window.innerWidth > 1050) {
-			if(35 < $(window).scrollTop()) {
-				if($('#img-ass').height() == 100) {
-					$("#img-ass").animate({
-						height: "34px"
-					});
-				}
-			} else {
-				if($('#img-ass').height() == 34) {
-					$("#img-ass").animate({
-						height: "100px"
-					});
-				}
-			}
-		} else {
-			if($('#img-ass').height() == 100) {
-				$("#img-ass").animate({
-					height: "34px"
-				});
-			}
-		}
-
-	}
-
-	$(document).ready(function() {
-
-
-		$('header').height($(window).height());
-
-		arrumar_assinatura();
-
-		$(window).scroll(function() {
-			arrumar_assinatura();
-		});
-
-
-		$(window).resize(function() {
-			$('header').height($(window).height());
-		});
-
-	});
-
-
-	window.setInterval(function(){
-		arrumar_assinatura();
-
-
-	}, 1000);
 
 </script>
 
